@@ -9,11 +9,12 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+@SuppressWarnings("serial")
 @Setter
 @Getter
 @Entity
 @Table(name="accounts")
-public class Account {
+public class Account implements Serializable {
 
  @Id
  @Column(name="login", length=50)
